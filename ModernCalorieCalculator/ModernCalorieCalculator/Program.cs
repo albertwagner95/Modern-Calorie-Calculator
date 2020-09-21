@@ -17,7 +17,23 @@ namespace ModernCalorieCalculator
             var mainMenu = actionService.GetMenuActionsByMenuName("Main");
             ShowMenu(mainMenu);
 
+            var operation = Console.ReadKey();
+            
+            switch (operation.KeyChar)
+            {
+                case '1':
+                    Console.WriteLine("Adding item.");
+                    break;
 
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Action you entered does not exist");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    break;
+            }
+
+            //Item item = new Item() { TypeOfMeal = KindOfMeal.Breakfast };
+            //Console.WriteLine(item.TypeOfMeal);
         }
 
         public static MenuActionService Initialize(MenuActionService actionService)
