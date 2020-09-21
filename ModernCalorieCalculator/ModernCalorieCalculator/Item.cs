@@ -14,6 +14,7 @@ namespace ModernCalorieCalculator
         public decimal QuantityProteinsPOHG { get; set; } //POHG = PerOneHounderdGrams
         public decimal ProductCost { get; set; } //How much do you pay for a specific product e.g milk chocolate costs PLN 5. e.t.c.
         public KindOfMeal TypeOfMeal { get; set; }
+        public DateTime DateAdded { get; set; }
         public int CategoryId { get; set; }
     }
     public enum KindOfMeal

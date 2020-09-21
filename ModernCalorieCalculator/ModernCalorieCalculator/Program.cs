@@ -15,10 +15,8 @@ namespace ModernCalorieCalculator
             actionService = Initialize(actionService);
 
             var mainMenu = actionService.GetMenuActionsByMenuName("Main");
-            
-
-
             ItemService itemService = new ItemService();
+
             while (true)
             {
                 ShowMenu(mainMenu);
@@ -29,15 +27,14 @@ namespace ModernCalorieCalculator
                     case '1':
                         var keyInfo = itemService.AddNewItemView(actionService);
                         var itemId = itemService.AddNewItem(keyInfo.KeyChar);
+                        var product = itemService.Items.Find(x => x.Id == itemId);
 
-                        var forShow = itemService.Items.Find(x => x.Id == itemId);
-                        Console.WriteLine( "Pomyślnie dodano" + forShow.Name + forShow.Id);
+                        Console.WriteLine($"Product {product.Name} successfully added.");
+                        break;
 
-                        Console.WriteLine("Wszystie produkty");
-                        foreach (var item in itemService.Items)
-                        {
-                            Console.WriteLine(item.Id + " " + item.Name);
-                        }
+                    case '2':
+                        var detailsProductId = itemService.DetailItemView();
+                        itemService.ShowItemDetails(detailsProductId);
                         break;
 
                     default:
@@ -55,7 +52,7 @@ namespace ModernCalorieCalculator
         public static MenuActionService Initialize(MenuActionService actionService)
         {
             actionService.AddNewAction(1, "Add new product to database", "Main");
-            actionService.AddNewAction(2, "Add product to the selected day", "Main");
+            actionService.AddNewAction(2, "Product details", "Main");
 
             actionService.AddNewAction(1, "Vegetables", "AddNewItemMenu");
             actionService.AddNewAction(2, "Meal", "AddNewItemMenu");

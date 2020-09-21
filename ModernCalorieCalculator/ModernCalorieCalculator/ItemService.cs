@@ -18,11 +18,7 @@ namespace ModernCalorieCalculator
             var addNewItemMenu = actionService.GetMenuActionsByMenuName("AddNewItemMenu");
             Console.WriteLine("Please select product category");
 
-            foreach (var menuAction in addNewItemMenu)
-            {
-                Console.WriteLine($"{menuAction.Id}. {menuAction.Name}");
-            }
-
+            Program.ShowMenu(addNewItemMenu);
             var operation = Console.ReadKey();
 
             return operation;
@@ -38,6 +34,23 @@ namespace ModernCalorieCalculator
             return AddNewItemProperties(item, typeId);
         }
 
+        public int DetailItemView()
+        {
+            Console.WriteLine("Please enter id for item want to check details");
+            var itemId = Console.ReadLine();
+            Int32.TryParse(itemId, out int id);
+
+            return id;
+        }
+
+        public void ShowItemDetails(int itemId)
+        {
+            var productDetails = Items.Find(x => x.Id == itemId);
+            Console.WriteLine("Details product:");
+            Console.WriteLine($"Id: {productDetails.Id}");
+            Console.WriteLine($"Name: {productDetails.Name}");
+            Console.WriteLine($"Kcal per 100 grams: {productDetails.KcalPerOneHounderGrams}");
+        }
         public int AddNewItemProperties(Item item, int typeId)
         {
             item.CategoryId = typeId;
@@ -56,6 +69,7 @@ namespace ModernCalorieCalculator
             item.QuantityFatsPOHG = quantityFatsPerOneHoundredGrams;
 
             Items.Add(item);
+            Console.Clear();
 
             return item.Id;
         }
