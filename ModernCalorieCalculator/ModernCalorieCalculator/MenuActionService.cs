@@ -23,7 +23,7 @@ namespace ModernCalorieCalculator
         public List<MenuAction> GetMenuActionsByMenuName(string menuName)
         {
             List<MenuAction> result = new List<MenuAction>();
-
+            
             foreach (var menuAction in menuActions)
             {
                 if (menuAction.MenuName == menuName)
