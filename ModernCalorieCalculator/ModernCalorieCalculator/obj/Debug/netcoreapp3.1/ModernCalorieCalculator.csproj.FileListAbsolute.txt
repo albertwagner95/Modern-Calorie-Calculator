@@ -1,0 +1,26 @@
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.exe
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.deps.json
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.runtimeconfig.json
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.runtimeconfig.dev.json
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.dll
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.pdb
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.csprojAssemblyReference.cache
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.AssemblyInfoInputs.cache
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.AssemblyInfo.cs
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.csproj.CoreCompileInputs.cache
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.dll
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.pdb
+C:\Users\wagne\source\repos\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.genruntimeconfig.cache
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.exe
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.deps.json
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.runtimeconfig.json
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.runtimeconfig.dev.json
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.dll
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.pdb
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.csprojAssemblyReference.cache
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.AssemblyInfoInputs.cache
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.AssemblyInfo.cs
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.csproj.CoreCompileInputs.cache
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.dll
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.pdb
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.genruntimeconfig.cache

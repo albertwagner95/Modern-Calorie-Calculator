@@ -1,0 +1,32 @@
+Modern-Calorie-Calculator
+Aplikacja typu fitatu plus obliczanie wydatków żywieniowowych
+( posiłek, dzienny, tygodniowy, miesięczny, kwartalny, roczny, filtrując po dacie)
+A. Dodanie nowego produktu do bazy
+B. Podejrzenie detali produktu
+C. Modyfikacja produktu
+D. Wyszukiwanie produktu po wybranych kryteriach
+E. Wyszukiwanie wszystkich produktó
+F. Dodanie produktu do konkretnego dnia.
+
+W pierwszym kroku użytkownik zostanie zapytany co chce zrobić w aplikacji. Pojawi się również
+informacja jaki jest dzisiaj dzień.
+
+A1. Najpierw użytkownik zostanie zapytany o kategorię produktu
+A2. Zostanie poproszony o podanie wymaganych szczegółów
+
+B1. W przypadku, kiedy użytkownik będzie chciał podejrzeć detale program zapyta
+dla jakiego produktu chce to wykonać
+
+C1. Aby zmodyfikować produkt, program zapyta o id produktu, który chce zmodyfikować,
+jeśli wyszukiwanie będzie poprawne program zapyta co dokładnie chce zmodyfikować użytkownik
+
+D1. Jeśli użytkownik będzie chciał wuszukać produkt po kryteriach, zostanie zapytany o nazwe 
+kategori lub id kategori
+
+E1. Program zwróci wszystkie produkty doodane z możliwościa sortowania po nazwie, kategorii,
+dacie dodanie oraz id.
+
+F1. Program docelowo zaczyta datę bieżącą i umożliwi dodanie produktów oraz ich gramatury a następnie
+doda produkt do listy z konkretnym dniem i posiłkiem.
+F2. W przypadku dodania produktu na inny dzień system poinformuje, aby dodać na inny dzień, zmień datę
+itd.
