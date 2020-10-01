@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "ModernCalorieCalculator/1.0.0": {
+        "dependencies": {
+          "ModernCalorieCalculator.App": "1.0.0",
+          "ModernCalorieCalculator.Domain": "1.0.0"
+        },
         "runtime": {
           "ModernCalorieCalculator.dll": {}
+        }
+      },
+      "ModernCalorieCalculator.App/1.0.0": {
+        "dependencies": {
+          "ModernCalorieCalculator.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ModernCalorieCalculator.App.dll": {}
+        }
+      },
+      "ModernCalorieCalculator.Domain/1.0.0": {
+        "runtime": {
+          "ModernCalorieCalculator.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ModernCalorieCalculator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ModernCalorieCalculator.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ModernCalorieCalculator.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

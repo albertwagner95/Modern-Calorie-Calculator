@@ -24,3 +24,8 @@ C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calo
 C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.dll
 C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.pdb
 C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.genruntimeconfig.cache
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.App.dll
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.Domain.dll
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.App.pdb
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\bin\Debug\netcoreapp3.1\ModernCalorieCalculator.Domain.pdb
+C:\Users\wagne\Desktop\Kurs programista asp.net core\Console-Project\Modern-Calorie-Calculator\ModernCalorieCalculator\ModernCalorieCalculator\obj\Debug\netcoreapp3.1\ModernCalorieCalculator.csproj.CopyComplete

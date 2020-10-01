@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ThjCjVIAHT6R1WZsj2RGWlt/sRx0Hxb1mvyfwffokCP3EJ3EEi0QsOzEhWosdRgP8qlQxOmgXpW92IbtORmipw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\wagne\\Desktop\\Kurs programista asp.net core\\Console-Project\\Modern-Calorie-Calculator\\ModernCalorieCalculator\\ModernCalorieCalculator.App\\ModernCalorieCalculator.App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wagne\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\wagne\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
