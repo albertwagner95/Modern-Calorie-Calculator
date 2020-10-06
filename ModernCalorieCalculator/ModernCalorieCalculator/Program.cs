@@ -5,6 +5,7 @@ using ModernCalorieCalculator.App;
 using ModernCalorieCalculator.App.Managers;
 using ModernCalorieCalculator.Helpers;
 using System.Data;
+using ModernCalorieCalculator.Domain.Entity;
 
 namespace ModernCalorieCalculator
 {
@@ -17,9 +18,10 @@ namespace ModernCalorieCalculator
             Console.WriteLine("Please enter, what do you want to do?");
 
 
-
+            ItemService itemService = new ItemService();
             MenuActionService actionService = new MenuActionService();
-            ItemManager itemManager = new ItemManager(actionService);
+
+            ItemManager itemManager = new ItemManager(actionService, itemService);
 
             while (true)
             {
@@ -34,7 +36,7 @@ namespace ModernCalorieCalculator
                         break;
                     case '2':
 
-                        Console.WriteLine(itemManager.GetAllItems().ToStringTable(new[] { "Id", "Name", "Kcal", "Fat", "Protein", "Carbo", "cost" },
+                        Console.WriteLine(itemService.GetAllItems().ToStringTable(new[] { "Id", "Name", "Kcal", "Fat", "Protein", "Carbo", "cost" },
                             x => x.Id,
                             x => x.Name,
                             x => x.KcalPerOneHounderGrams,
@@ -59,8 +61,6 @@ namespace ModernCalorieCalculator
                 }
             }
 
-            //Item item = new Item() { TypeOfMeal = KindOfMeal.Breakfast };
-            //Console.WriteLine(item.TypeOfMeal);
         }
 
 

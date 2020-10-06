@@ -1,179 +1,107 @@
-﻿using ModernCalorieCalculator.App.Common;
+﻿using ModernCalorieCalculator.App.Abstract;
+using ModernCalorieCalculator.Domain.Common;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace ModernCalorieCalculator.App.Concrete
 {
-    public class ItemService : BaseService<Item>
+    public class ItemService : IService
     {
+        public List<Item> Items { get; set; }
 
-        public Item GetProductById(int id)
+        public ItemService()
         {
-            var selectedProduct = Items.FirstOrDefault(x => x.Id == id);
-            if (selectedProduct != null)
+            Items = new List<Item>();
+        }
+
+        public int AddItem(Item item)
+        {
+            Items.Add(item);
+
+            return item.Id;
+        }
+
+        public List<Item> GetAllItems()
+        {
+            return Items;
+        }
+
+        public void RemoveItem(Item item)
+        {
+            Items.Remove(item);
+        }
+
+        public int UpdateItem(Item item)
+        {
+            var entity = Items.FirstOrDefault(x => x.Id == item.Id);
+            entity = item;
+            return entity.Id;
+
+        }
+       
+        public Item GetItemById(int id)
+        {
+            var entity = Items.FirstOrDefault(x => x.Id == id);
+            return entity;
+        }
+
+        public int GetLastId()
+        {
+            int lastId;
+
+            if (Items.Any())
             {
-                return selectedProduct;
+                lastId = Items.OrderBy(p => p.Id).LastOrDefault().Id;
             }
             else
             {
-                return null;
+                lastId = 0;
             }
+            return lastId;
+        }
+        
+        public int UpdateName(string name, Item item)
+        { 
+            var entity = Items.FirstOrDefault(x => x.Id == item.Id);
+            entity.Name = name;
+            entity.CreationDate = DateTime.Now;
+            return entity.Id;
         }
 
-
-
-        /// <summary>
-        /// POHG - abbreviation Per One Houndred Grams
-        /// This method return id product after update Calories etc and Per One Hounder Grams.
-        /// </summary>
-        /// <param name="productToUpdate"></param>
-        /// <returns>This method return id product after update Calories etc Per One Hounder Grams.</returns>
-        public int UpdateProductByProperty(Item productToUpdate, int operation)
+        public int UpdateKcalPerOneHoundredGrams(int quantity, Item item)
         {
-            switch (operation)
-            {
-                case 1:
-                    Console.WriteLine("Enter new item name");
-                    var loadingProductName = Console.ReadLine();
-
-                    productToUpdate.Name = loadingProductName;
-                    productToUpdate.UpdateTime = DateTime.Now;
-                    return productToUpdate.Id;
-
-                case 2:
-                    {
-                        Console.WriteLine("Enter kcal 100/g of the product which you want update");
-                        var kcal = Console.ReadLine();
-                        bool isLoading = int.TryParse(kcal, out int kcalToUpdate);
-                        if (!isLoading)
-                        {
-                            while (!isLoading)
-                            {
-                                Console.WriteLine("Data is incorrect, please enter kcal 100/g once again. If you want exit, press Y");
-                                kcal = Console.ReadLine();
-
-                                if (kcal.ToUpper() == "Y")
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    isLoading = int.TryParse(kcal, out kcalToUpdate);
-                                    productToUpdate.KcalPerOneHounderGrams = kcalToUpdate;
-                                    productToUpdate.UpdateTime = DateTime.Now;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            productToUpdate.KcalPerOneHounderGrams = kcalToUpdate;
-                        }
-                        return productToUpdate.Id;
-                    }
-
-                case 3:
-
-
-                    {
-                        Console.WriteLine("Enter fat 100/g of the product which you want update");
-                        var fat = Console.ReadLine();
-                        bool isLoading = int.TryParse(fat, out int fatToUpdate);
-                        if (!isLoading)
-                        {
-                            while (!isLoading)
-                            {
-                                Console.WriteLine("Data is incorrect, please enter fat 100/g once again. If you want exit, press Y");
-                                fat = Console.ReadLine();
-
-                                if (fat.ToUpper() == "Y")
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    isLoading = int.TryParse(fat, out fatToUpdate);
-                                    productToUpdate.QuantityFatsPOHG = fatToUpdate;
-                                    productToUpdate.UpdateTime = DateTime.Now;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            productToUpdate.QuantityFatsPOHG = fatToUpdate;
-                        }
-                        return productToUpdate.Id;
-                    }
-                case 4:
-                    {
-                        Console.WriteLine("Enter carbo 100/g of the product which you want update");
-                        var carbo = Console.ReadLine();
-                        bool isLoading = int.TryParse(carbo, out int carboToUpdate);
-                        if (!isLoading)
-                        {
-                            while (!isLoading)
-                            {
-                                Console.WriteLine("Data is incorrect, please enter fat 100/g once again. If you want exit, press Y");
-                                carbo = Console.ReadLine();
-
-                                if (carbo.ToUpper() == "Y")
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    isLoading = int.TryParse(carbo, out carboToUpdate);
-                                    productToUpdate.QuantityFatsPOHG = carboToUpdate;
-                                    productToUpdate.UpdateTime = DateTime.Now;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            productToUpdate.QuantityCarbohydratesPOHG = carboToUpdate;
-                        }
-                        return productToUpdate.Id;
-                    }
-                case 5:
-
-                    {
-                        Console.WriteLine("Enter fat 100/g of the product which you want update");
-                        var protein = Console.ReadLine();
-                        bool isLoading = int.TryParse(protein, out int proteinToUpdate);
-                        if (!isLoading)
-                        {
-                            while (!isLoading)
-                            {
-                                Console.WriteLine("Data is incorrect, please enter fat 100/g once again. If you want exit, press Y");
-                                protein = Console.ReadLine();
-
-                                if (protein.ToUpper() == "Y")
-                                {
-                                    break;
-                                }
-                                else
-                                {
-                                    isLoading = int.TryParse(protein, out proteinToUpdate);
-                                    productToUpdate.QuantityFatsPOHG = proteinToUpdate;
-                                    productToUpdate.UpdateTime = DateTime.Now;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            productToUpdate.QuantityProteinsPOHG = proteinToUpdate;
-                        }
-                        return productToUpdate.Id;
-                    }
-                
-                default:
-                    Console.WriteLine("");
-                    return productToUpdate.Id;
-            }
+            var entity = Items.FirstOrDefault(x => x.Id == item.Id);
+            entity.KcalPerOneHounderGrams = quantity;
+            entity.CreationDate = DateTime.Now;
+            return entity.Id;
         }
 
+        public int UpdateProteinsPerOneHoundredGrams(int quantity, Item item)
+        {
+            var entity = Items.FirstOrDefault(x => x.Id == item.Id);
+            entity.QuantityProteinsPOHG = quantity;
+            entity.CreationDate = DateTime.Now;
+            return entity.Id;
+        }
 
+        public int UpdateCarbohydratesPerOneHoundredGrams(int quantity, Item item)
+        {
+            var entity = Items.FirstOrDefault(x => x.Id == item.Id);
+            entity.QuantityCarbohydratesPOHG = quantity;
+            entity.CreationDate = DateTime.Now;
+            return entity.Id;
+        }
+
+        public int UpdateFatsPerOneHoundredGrams(int quantity, Item item)
+        {
+            var entity = Items.FirstOrDefault(x => x.Id == item.Id);
+            entity.QuantityFatsPOHG = quantity;
+            entity.CreationDate = DateTime.Now;
+            return entity.Id;
+        }
     }
 }

@@ -1,18 +1,53 @@
-﻿using ModernCalorieCalculator.App.Common;
+﻿using ModernCalorieCalculator.App.Abstract;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ModernCalorieCalculator.App.Concrete
 {
-    public class MenuActionService : BaseService<MenuAction>
+    public class MenuActionService : IMenuAction
     {
+        public List<MenuAction> Items { get; set; }
+
         public MenuActionService()
-        {
+        { 
+            Items = new List<MenuAction>(); 
             Initialize();
         }
 
+        public int AddItem(MenuAction item)
+        {
+            Items.Add(item);
+
+            return item.Id;
+        }
+
+        public List<MenuAction> GetAllItems()
+        {
+            return Items;
+        }
+
+        public void RemoveItem(MenuAction item)
+        {
+            Items.Remove(item);
+        }
+
+        public int UpdateItem(MenuAction item)
+        {
+            var entity = Items.FirstOrDefault(x => x.Id == item.Id);
+            entity = item;
+            return entity.Id;
+
+        }
+       
+        public MenuAction GetItemById(int id)
+        {
+            var entity = Items.FirstOrDefault(x => x.Id == id);
+            return entity;
+        }
+         
         public List<MenuAction> GetMenuActionsByMenuName(string menuName)
         {
             List<MenuAction> result = new List<MenuAction>();
