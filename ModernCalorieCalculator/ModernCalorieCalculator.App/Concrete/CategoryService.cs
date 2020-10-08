@@ -8,14 +8,14 @@ using System.Text;
 
 namespace ModernCalorieCalculator.App.Concrete
 {
-    class CategoryService : ICategory
+    public class CategoryService : ICategory
     {
         public List<Category> Categories { get; set; }
 
         public CategoryService()
         {
             Categories = new List<Category>();
-            Initialize();
+            InitializeBasicCategories();
         }
 
         public int AddCategory(Category category)
@@ -41,10 +41,22 @@ namespace ModernCalorieCalculator.App.Concrete
 
         }
 
-        private void Initialize()
+        private void InitializeBasicCategories()
         {
-            Categories.Add(new Category(1, "Meet"));
+            Categories.Add(new Category(1, "Meat"));
             Categories.Add(new Category(2, "Vegetables"));
+            Categories.Add(new Category(3, "Diary"));
+            Categories.Add(new Category(4, "Confections"));
+            Categories.Add(new Category(5, "Water"));
+            Categories.Add(new Category(6, "Fruits"));
+            Categories.Add(new Category(7, "Grains"));
+            Categories.Add(new Category(8, "Other"));
+        }
+
+        public string GetCategoryNameById(int id)
+        {
+            var categoryName = Categories.FirstOrDefault(x => x.CategoryId == id);
+            return categoryName.CategoryName;
         }
     }
 }

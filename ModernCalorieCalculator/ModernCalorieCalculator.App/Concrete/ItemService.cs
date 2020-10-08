@@ -1,20 +1,21 @@
 ﻿using ModernCalorieCalculator.App.Abstract;
+using ModernCalorieCalculator.Domain;
 using ModernCalorieCalculator.Domain.Common;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 namespace ModernCalorieCalculator.App.Concrete
 {
     public class ItemService : IService
     {
         public List<Item> Items { get; set; }
+        public ItemConfiguration ItemConfiguration { get; set; }
 
         public ItemService()
         {
+            ItemConfiguration = new ItemConfiguration();
             Items = new List<Item>();
         }
 
@@ -42,7 +43,7 @@ namespace ModernCalorieCalculator.App.Concrete
             return entity.Id;
 
         }
-       
+
         public Item GetItemById(int id)
         {
             var entity = Items.FirstOrDefault(x => x.Id == id);
@@ -63,9 +64,9 @@ namespace ModernCalorieCalculator.App.Concrete
             }
             return lastId;
         }
-        
+
         public int UpdateName(string name, Item item)
-        { 
+        {
             var entity = Items.FirstOrDefault(x => x.Id == item.Id);
             entity.Name = name;
             entity.CreationDate = DateTime.Now;

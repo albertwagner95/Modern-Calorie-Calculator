@@ -6,6 +6,7 @@ using ModernCalorieCalculator.App.Managers;
 using ModernCalorieCalculator.Helpers;
 using System.Data;
 using ModernCalorieCalculator.Domain.Entity;
+using ModernCalorieCalculator.App.Managers.Helpers;
 
 namespace ModernCalorieCalculator
 {
@@ -20,8 +21,10 @@ namespace ModernCalorieCalculator
 
             ItemService itemService = new ItemService();
             MenuActionService actionService = new MenuActionService();
+            CategoryService categoryService = new CategoryService();
+             
 
-            ItemManager itemManager = new ItemManager(actionService, itemService);
+            ItemManager itemManager = new ItemManager(actionService, itemService, categoryService);
 
             while (true)
             {
@@ -36,14 +39,15 @@ namespace ModernCalorieCalculator
                         break;
                     case '2':
 
-                        Console.WriteLine(itemService.GetAllItems().ToStringTable(new[] { "Id", "Name", "Kcal", "Fat", "Protein", "Carbo", "cost" },
+                        Console.WriteLine(itemService.GetAllItems().ToStringTable(new[] { "Id", "Name", "Kcal", "Fat", "Protein", "Carbo", "Cost","Category" },
                             x => x.Id,
                             x => x.Name,
                             x => x.KcalPerOneHounderGrams,
                             x => x.QuantityFatsPOHG,
                             x => x.QuantityProteinsPOHG,
                             x => x.QuantityCarbohydratesPOHG,
-                            x => x.ProductCost));
+                            x => x.ProductCost,
+                            x => x.CategoryName));
                         break;
                     case '3':
                         itemManager.updateitem();

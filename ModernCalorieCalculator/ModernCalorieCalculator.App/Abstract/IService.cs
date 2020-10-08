@@ -1,4 +1,5 @@
-﻿using ModernCalorieCalculator.Domain.Entity;
+﻿using ModernCalorieCalculator.Domain;
+using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,8 @@ namespace ModernCalorieCalculator.App.Abstract
     public interface IService
     {
         List<Item> Items { get; set; }
+
+        ItemConfiguration ItemConfiguration { get; set; }
 
         List<Item> GetAllItems();
 

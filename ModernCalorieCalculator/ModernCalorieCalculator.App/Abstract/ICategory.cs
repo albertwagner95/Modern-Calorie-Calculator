@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ModernCalorieCalculator.App.Abstract
 {
-    interface ICategory
+    public interface ICategory
     {
         List<Category> Categories { get; set; }
 
@@ -17,6 +17,6 @@ namespace ModernCalorieCalculator.App.Abstract
 
         Category GetCategoryById(int id);
 
-        private void Initialize();
-    }
+        string GetCategoryNameById(int id);
+     }
 }
