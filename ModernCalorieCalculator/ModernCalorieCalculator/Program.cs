@@ -7,6 +7,8 @@ using ModernCalorieCalculator.Helpers;
 using System.Data;
 using ModernCalorieCalculator.Domain.Entity;
 using ModernCalorieCalculator.App.Managers.Helpers;
+using System.Configuration;
+using System.IO;
 
 namespace ModernCalorieCalculator
 {
@@ -14,15 +16,17 @@ namespace ModernCalorieCalculator
     {
         static void Main(string[] args)
         {
+            string x = "x";
+
+            Console.WriteLine(x);
             Console.WriteLine("Today is " + DateTime.Today.ToShortDateString());
             Console.WriteLine("\nWelcome in Modern Calories Calculator");
             Console.WriteLine("Please enter, what do you want to do?");
 
-
             ItemService itemService = new ItemService();
             MenuActionService actionService = new MenuActionService();
             CategoryService categoryService = new CategoryService();
-             
+
 
             ItemManager itemManager = new ItemManager(actionService, itemService, categoryService);
 
@@ -39,7 +43,7 @@ namespace ModernCalorieCalculator
                         break;
                     case '2':
 
-                        Console.WriteLine(itemService.GetAllItems().ToStringTable(new[] { "Id", "Name", "Kcal", "Fat", "Protein", "Carbo", "Cost","Category" },
+                        Console.WriteLine(itemService.GetAllItems().ToStringTable(new[] { "Id", "Name", "Kcal", "Fat", "Protein", "Carbo", "Cost", "Category" },
                             x => x.Id,
                             x => x.Name,
                             x => x.KcalPerOneHounderGrams,

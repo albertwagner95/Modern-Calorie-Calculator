@@ -71,7 +71,7 @@ namespace ModernCalorieCalculator.App.Managers
 
             Item item = new Item(_itemService.ItemConfiguration);
             _itemService.AddItem(item);
-
+            _itemService.AddItemToXml(item);
             Console.Clear();
             return item.Id;
         }

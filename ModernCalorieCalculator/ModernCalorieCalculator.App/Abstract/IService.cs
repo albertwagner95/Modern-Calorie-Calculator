@@ -33,5 +33,6 @@ namespace ModernCalorieCalculator.App.Abstract
         int UpdateCarbohydratesPerOneHoundredGrams(int quantity, Item item);
 
         int UpdateFatsPerOneHoundredGrams(int quantity, Item item);
+        void AddItemToXml(Item item);
     }
 }

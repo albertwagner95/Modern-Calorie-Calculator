@@ -4,7 +4,9 @@ using ModernCalorieCalculator.Domain.Common;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.App.Concrete
 {
@@ -18,7 +20,16 @@ namespace ModernCalorieCalculator.App.Concrete
             ItemConfiguration = new ItemConfiguration();
             Items = new List<Item>();
         }
+        public void AddItemToXml(Item newItem)
+        {
+            XmlRootAttribute root = new XmlRootAttribute();
+            root.ElementName = "Items";
+            root.IsNullable = true;
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Item>), root);
 
+            using StreamWriter sw = new StreamWriter(@"C:\Users\wagne\Desktop\products.xml");
+            xmlSerializer.Serialize(sw, Items);
+        }
         public int AddItem(Item item)
         {
             Items.Add(item);

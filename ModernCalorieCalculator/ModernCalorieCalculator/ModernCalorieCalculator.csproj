@@ -10,4 +10,8 @@
     <ProjectReference Include="..\ModernCalorieCalculator.Domain\ModernCalorieCalculator.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+
 </Project>
