@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User Id="1">
+    <Name>Janusz</Name>
+    <LastName>Wajs</LastName>
+    <Login>Janex</Login>
+    <Age>0</Age>
+    <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>
+  </User>
+  <User Id="2">
+    <Name>Paweł</Name>
+    <LastName>Gaweł</LastName>
+    <Login>John</Login>
+    <Age>0</Age>
+    <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>
+  </User>
+  <User Id="3">
+    <Name>Piotr</Name>
+    <LastName>Zygmuntowski</LastName>
+    <Login>Pioter</Login>
+    <Age>0</Age>
+    <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>
+  </User>
+</Users>

@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ModernCalorieCalculator.App\ModernCalorieCalculator.App.csproj" />
     <ProjectReference Include="..\ModernCalorieCalculator.Domain\ModernCalorieCalculator.Domain.csproj" />
+    <ProjectReference Include="..\ModernCalorieCalculator\ModernCalorieCalculator.csproj" />
   </ItemGroup>
 
 </Project>

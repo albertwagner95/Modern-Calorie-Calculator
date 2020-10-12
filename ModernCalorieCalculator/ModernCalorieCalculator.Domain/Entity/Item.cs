@@ -10,7 +10,6 @@ namespace ModernCalorieCalculator.Domain.Entity
     public class Item : Category
     {   
         [XmlAttribute("Id")]
-        
         public int Id { get; set; }
         
         [XmlElement("Name")]

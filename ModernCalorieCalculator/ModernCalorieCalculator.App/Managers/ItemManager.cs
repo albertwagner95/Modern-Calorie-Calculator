@@ -212,5 +212,6 @@ namespace ModernCalorieCalculator.App.Managers
                     return productToUpdate.Id;
             }
         }
+        
     }
 }
