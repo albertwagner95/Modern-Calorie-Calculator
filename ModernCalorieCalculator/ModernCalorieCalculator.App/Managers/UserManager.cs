@@ -51,9 +51,8 @@ namespace ModernCalorieCalculator.App.Managers
             var lastName = Console.ReadLine();
             Console.WriteLine("Thank you! Now, give me your nickName!");
             var login = Console.ReadLine();
+            Console.WriteLine("Thank you! Now, give me your data of birth in format");
             var user = RegisterUser(name, lastName, login);
-            //Console.WriteLine("If you want, give me your birth day");
-            //var birthday = Consoler.Rea
 
             if (user == null)
             {

@@ -84,7 +84,7 @@ namespace ModernCalorieCalculator.App.Concrete
             xmlSerializer.Serialize(sw, Users);
         }
 
-        private List<User> LoadUsersFromXml(string path)
+        public List<User> LoadUsersFromXml(string path)
         {
             List<User> users = new List<User>();
             XmlRootAttribute root = new XmlRootAttribute();
