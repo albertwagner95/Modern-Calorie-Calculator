@@ -21,4 +21,18 @@
     <Age>0</Age>
     <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>
   </User>
+  <User Id="4">
+    <Name>Bert</Name>
+    <LastName>bert</LastName>
+    <Login>Bert</Login>
+    <Age>0</Age>
+    <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>
+  </User>
+  <User Id="5">
+    <Name>John</Name>
+    <LastName>j</LastName>
+    <Login>j</Login>
+    <Age>0</Age>
+    <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>
+  </User>
 </Users>

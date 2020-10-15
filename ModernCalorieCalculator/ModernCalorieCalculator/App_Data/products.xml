@@ -108,4 +108,16 @@
     <QuantityProteinsPOHG>22</QuantityProteinsPOHG>
     <ProductCost>12</ProductCost>
   </Item>
+  <Item Id="10">
+    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+    <CreationDate>0001-01-01T00:00:00</CreationDate>
+    <CategoryId>7</CategoryId>
+    <CategoryName>Grains</CategoryName>
+    <Name>Chleb Sojowy</Name>
+    <KcalPerOneHounderGrams>120</KcalPerOneHounderGrams>
+    <QuantityFatsPOHG>212</QuantityFatsPOHG>
+    <QuantityCarbohydratesPOHG>221</QuantityCarbohydratesPOHG>
+    <QuantityProteinsPOHG>21</QuantityProteinsPOHG>
+    <ProductCost>22</ProductCost>
+  </Item>
 </Items>

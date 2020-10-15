@@ -2,8 +2,10 @@
 using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.App.Concrete
 {
@@ -11,15 +13,50 @@ namespace ModernCalorieCalculator.App.Concrete
     {
         public List<Day> Days { get; set; }
         private IUser _userSerice;
-        public DayService(IUser userService)
+        private IService _itemService;
+        private readonly string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\App_Data\days.xml");
+        public DayService(IUser userService, IService itemService)
         {
+            _itemService = itemService;
             _userSerice = userService;
-            Days = new List<Day>();
+            var days = LoadDaysFromXml(path);
+            Days = LoadDaysFromXml(path);
+
+            if (Days == null)
+            {
+                Days = new List<Day>();
+            }
         }
-        public int AddDay(Day item)
+        public void AddDayToXml()
         {
-            Days.Add(item);
-            return (item.Id);
+            XmlRootAttribute root = new XmlRootAttribute();
+            root.ElementName = "Days";
+            root.IsNullable = true;
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Day>), root);
+            using StreamWriter sw = new StreamWriter(path);
+
+            xmlSerializer.Serialize(sw, Days);
+        }
+        public int AddDay(Day day)
+        {
+            Days.Add(day);
+            AddDayToXml();
+            return (day.Id);
+        }
+
+        public int AddProductToUserDay(int productId, DateTime dayDate, int userId)
+        {
+            var item = _itemService.GetItemById(productId);
+            var day = Days.FirstOrDefault(x => x.UserDay == dayDate && x.UserId == userId);
+            if (item != null && day != null)
+            {
+                day.DayItems.Add(item);
+                return item.Id;
+            }
+            else
+            {
+                return 0; //if zero -> product not found
+            }
         }
 
         public Day GetDayByDateAndUserId(DateTime date, int userId)
@@ -32,6 +69,27 @@ namespace ModernCalorieCalculator.App.Concrete
             else
             {
                 return null;
+            }
+        }
+
+        private List<Day> LoadDaysFromXml(string path)
+        {
+            List<Day> days = new List<Day>();
+            XmlRootAttribute root = new XmlRootAttribute();
+            root.ElementName = "Days";
+            root.IsNullable = true;
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Day>), root);
+
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+            else
+            {
+                string xml = File.ReadAllText(path);
+                using StringReader sr = new StringReader(xml);
+                days = (List<Day>)xmlSerializer.Deserialize(sr);
+                return days;
             }
         }
 
@@ -65,6 +123,21 @@ namespace ModernCalorieCalculator.App.Concrete
                 return userDays;
             }
             return null;
+        }
+
+        public int GetLastId()
+        {
+            int lastId;
+
+            if (Days.Any())
+            {
+                lastId = Days.OrderBy(p => p.Id).LastOrDefault().Id;
+            }
+            else
+            {
+                lastId = 0;
+            }
+            return lastId;
         }
     }
 }

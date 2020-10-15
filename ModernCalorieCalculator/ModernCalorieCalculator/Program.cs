@@ -24,10 +24,12 @@ namespace ModernCalorieCalculator
             MenuActionService actionService = new MenuActionService();
             CategoryService categoryService = new CategoryService();
             UserService userService = new UserService();
-
+            DayService dayService = new DayService(userService, itemService);
+            
             UserManager userManager = new UserManager(userService);
             ItemManager itemManager = new ItemManager(actionService, itemService, categoryService);
-
+            DayManager dayManager = new DayManager(dayService, actionService);
+            
             var isLogin = 0;
             while (isLogin == 0)
             {
@@ -38,7 +40,10 @@ namespace ModernCalorieCalculator
             {
                 var user = userService.GetUserById(isLogin);
                 Console.WriteLine($"You are logged in as {user.Name} {user.LastName}\n");
-                
+                for (int i = 0; i < 3; i++)
+                {
+                    dayManager.AddUserDay(user.Id);
+                }
                 while (true)
                 {
                     actionService.ShowMenu("Main");

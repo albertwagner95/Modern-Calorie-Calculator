@@ -11,14 +11,18 @@ namespace ModernCalorieCalculator.App.Abstract
 
         List<Day> GetDaysBetweenTwoDates();
 
-        int AddDay(Day item);
+        int AddDay(Day day);
 
-        void RemoveDay(Day item);
+        void RemoveDay(Day day);
 
         Day GetDayById(int id);
 
         Day GetDayByDateAndUserId(DateTime date, int userId);
 
         List<Day> GetAllUserDays(int userId);
+
+        int AddProductToUserDay(int productId, DateTime dayDate, int userId);
+
+        int GetLastId();
     }
 }
