@@ -8,10 +8,10 @@ using System.Xml.Serialization;
 namespace ModernCalorieCalculator.Domain.Entity
 {
     public class Item : Category
-    {   
+    {
         [XmlAttribute("Id")]
         public int Id { get; set; }
-        
+
         [XmlElement("Name")]
         public string Name { get; set; }
         [XmlElement("KcalPerOneHounderGrams")]
@@ -24,6 +24,7 @@ namespace ModernCalorieCalculator.Domain.Entity
         public decimal QuantityProteinsPOHG { get; set; } //POHG = PerOneHounderdGrams
         [XmlElement("ProductCost")]
         public decimal ProductCost { get; set; } //How much do you pay for a specific product e.g milk chocolate costs PLN 5. e.t.c.
+        public string KindOfMeal { get; set; }
 
         public Item()
         {

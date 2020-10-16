@@ -1,10 +1,13 @@
 ﻿using ModernCalorieCalculator.App.Abstract;
+using ModernCalorieCalculator.App.Managers.Helpers;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.App.Concrete
@@ -44,13 +47,15 @@ namespace ModernCalorieCalculator.App.Concrete
             return (day.Id);
         }
 
-        public int AddProductToUserDay(int productId, DateTime dayDate, int userId)
+        public int AddProductToUserDay(int productId, DateTime dayDate, int userId, string kindOfMeal)
         {
             var item = _itemService.GetItemById(productId);
             var day = Days.FirstOrDefault(x => x.UserDay == dayDate && x.UserId == userId);
             if (item != null && day != null)
             {
+                item.KindOfMeal = kindOfMeal;
                 day.DayItems.Add(item);
+                AddDayToXml();
                 return item.Id;
             }
             else

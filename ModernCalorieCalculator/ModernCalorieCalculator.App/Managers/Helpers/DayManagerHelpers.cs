@@ -37,7 +37,11 @@ namespace ModernCalorieCalculator.App.Managers.Helpers
         public enum MealType
         {
             Breakfast,
-            SecondBreakfast 
+            SecondBreakfast,
+            Lunch,
+            Dinner,
+            Supper,
+            Snack 
         }
     }
 }

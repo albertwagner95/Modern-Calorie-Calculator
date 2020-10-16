@@ -250,4 +250,64 @@
     </DayItems>
     <UserId>2</UserId>
   </Day>
+  <Day Id="5">
+    <UserDay>2020-10-20T00:00:00</UserDay>
+    <SumKcal>0</SumKcal>
+    <SumCarbohydrates>0</SumCarbohydrates>
+    <SumProteins>0</SumProteins>
+    <SumFats>0</SumFats>
+    <DayItems>
+      <Item Id="1">
+        <UpdateTime>2020-10-10T20:22:06.4046771Z</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>3</CategoryId>
+        <CategoryName>Diary</CategoryName>
+        <Name>P</Name>
+        <KcalPerOneHounderGrams>120</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>22</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>33</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>33</QuantityProteinsPOHG>
+        <ProductCost>2.12</ProductCost>
+      </Item>
+      <Item Id="5">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>6</CategoryId>
+        <CategoryName>Fruits</CategoryName>
+        <Name>Apple</Name>
+        <KcalPerOneHounderGrams>192</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>2</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>2</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>3</QuantityProteinsPOHG>
+        <ProductCost>4</ProductCost>
+      </Item>
+      <Item Id="1">
+        <UpdateTime>2020-10-10T20:22:06.4046771Z</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>3</CategoryId>
+        <CategoryName>Diary</CategoryName>
+        <Name>P</Name>
+        <KcalPerOneHounderGrams>120</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>22</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>33</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>33</QuantityProteinsPOHG>
+        <ProductCost>2.12</ProductCost>
+        <KindOfMeal>Breakfast</KindOfMeal>
+      </Item>
+      <Item Id="12">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>2</CategoryId>
+        <CategoryName>Vegetables</CategoryName>
+        <Name>2</Name>
+        <KcalPerOneHounderGrams>2</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>2</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>2</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>2</QuantityProteinsPOHG>
+        <ProductCost>2</ProductCost>
+        <KindOfMeal>Snack</KindOfMeal>
+      </Item>
+    </DayItems>
+    <UserId>2</UserId>
+  </Day>
 </Days>
