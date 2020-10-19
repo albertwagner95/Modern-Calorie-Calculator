@@ -6,15 +6,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ModernCalorieCalculator;
+using System.Security.Cryptography.X509Certificates;
+using System.Runtime.CompilerServices;
 
 namespace ModernCalorieCalculator.App.Managers
 {
     public class DayManager
     {
+
         private IDay _dayService;
         private readonly MenuActionService _actionService;
-        private readonly ItemService _itemService;
-        public DayManager(DayService dayService, MenuActionService menuActionService, ItemService itemService)
+        private readonly IService _itemService;
+        public DayManager(IDay dayService, MenuActionService menuActionService, IService itemService)
         {
             _itemService = itemService;
             _dayService = dayService;
@@ -53,9 +57,18 @@ namespace ModernCalorieCalculator.App.Managers
         public void AddUserDay(int userId)
         {
             var dayFromUser = LoadingDayFromUser();
-            var dayId = _dayService.GetLastId() + 1;
-            List<Item> items = new List<Item>();
-            _dayService.AddDay(new Day(dayId, dayFromUser, userId, items));
+            var allUserDays = _dayService.GetAllUserDays(userId);
+            var isDayInUser = allUserDays.FirstOrDefault(x => x.UserDay.Equals(dayFromUser));
+
+            if (isDayInUser != null)
+            {
+                Console.WriteLine("You can't enter the same day");
+            }
+            else
+            {
+                var dayId = _dayService.GetLastId() + 1;
+                _dayService.AddDay(new Day(dayId, dayFromUser, userId));
+            }
         }
         public string ChooseTypeOfMeal()
         {
@@ -89,16 +102,18 @@ namespace ModernCalorieCalculator.App.Managers
             Console.WriteLine("Enter the day you want to add the product");
             var dataFromUser = Console.ReadLine();
             var dayFromUser = DayManagerHelpers.ReturnDayFromString(dataFromUser);
-            string kindOfMeal = "";
-            do
-            {
-                kindOfMeal = ChooseTypeOfMeal();
-            } while (kindOfMeal == null);
 
             Console.WriteLine("Enter product Id");
             var idFromUser = Console.ReadLine();
             int productId;
             bool isProductIdLoading = int.TryParse(idFromUser, out productId);
+
+            var typeOfMeal = ChooseTypeOfMeal();
+
+            Console.WriteLine("give me grams");
+            var productGramsFromUser = Console.ReadLine();
+            decimal productGrams;
+            decimal.TryParse(productGramsFromUser, out productGrams);
 
             if (isProductIdLoading == false)
             {
@@ -114,7 +129,7 @@ namespace ModernCalorieCalculator.App.Managers
                 }
                 else
                 {
-                    var day = _dayService.AddProductToUserDay(productId, dayFromUser, userId, kindOfMeal);
+                    var day = _dayService.AddProductToUserDay(productId, dayFromUser, userId, typeOfMeal, productGrams);
                     if (day == 0)
                     {
                         Console.WriteLine($"User don't have day {dataFromUser}");
@@ -143,11 +158,73 @@ namespace ModernCalorieCalculator.App.Managers
                 case '2':
                     AddItemToUserDayView(userId);
                     break;
+                case '3':
+                    ShowUserDay(userId);
+                    break;
                 default:
                     Console.WriteLine("Data is incorrect");
                     break;
             }
         }
 
+        private void ShowUserItemsInTypeOfMeal(string typeOfMealName, Day dayToShow)
+        {
+            Console.WriteLine($"{typeOfMealName} \n");
+            Console.WriteLine(dayToShow.DayItems.Where(x => x.TypeOfMeal == typeOfMealName)
+                                    .ToStringTable(new[] { "Id", "Name", "Kcal", "Proteins", "Fats", "Carbohydrates" },
+                                    x => x.Id,
+                                    x => x.Name,
+                                    x => x.KcalPerOneHounderGrams,
+                                    x => x.QuantityProteinsPOHG,
+                                    x => x.QuantityFatsPOHG,
+                                    x => x.QuantityFatsPOHG));
+        }
+        private void ShowUserDay(int userId)
+        {
+            var userDays = _dayService.GetAllUserDays(userId);
+            var dayFromUser = LoadingDayFromUser();
+            var dayToShow = userDays.FirstOrDefault(x => x.UserDay == dayFromUser);
+
+            if (dayToShow != null)
+            {
+                List<Day> dayHelper = new List<Day>();
+                dayHelper.Add(dayToShow);
+                Console.WriteLine(dayHelper.ToStringTable(new[] { "Id", "Date:", "Day week" },
+                                                            x => x.Id,
+                                                            x => x.UserDay.ToShortDateString(),
+                                                            x => x.UserDay.DayOfWeek));
+
+                ShowUserItemsInTypeOfMeal(DayManagerHelpers.MealType.Breakfast.ToString(), dayToShow);
+                ShowUserItemsInTypeOfMeal(DayManagerHelpers.MealType.SecondBreakfast.ToString(), dayToShow);
+                ShowUserItemsInTypeOfMeal(DayManagerHelpers.MealType.Lunch.ToString(), dayToShow);
+                ShowUserItemsInTypeOfMeal(DayManagerHelpers.MealType.Dinner.ToString(), dayToShow);
+                ShowUserItemsInTypeOfMeal(DayManagerHelpers.MealType.Snack.ToString(), dayToShow);
+                ShowUserItemsInTypeOfMeal(DayManagerHelpers.MealType.Supper.ToString(), dayToShow);
+
+                ShowDailySummary(dayToShow);
+            }
+            else
+            {
+                Console.WriteLine($"User don't have day {dayFromUser.ToShortDateString()}");
+            }
+        }
+
+        private void ShowDailySummary(Day dayToShow)
+        {
+            var calorieSummary = DayManagerHelpers.ReturnCalorieSummary(dayToShow.DayItems);
+            var fatSummary = DayManagerHelpers.ReturnFatSummary(dayToShow.DayItems);
+            var carbohydratesSummary = DayManagerHelpers.ReturnCarbohydratesSummary(dayToShow.DayItems);
+            var proteinsSummary = DayManagerHelpers.ReturnProteinsSummary(dayToShow.DayItems);
+            var costSummary = DayManagerHelpers.ReturnCostSummary(dayToShow.DayItems);
+
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine($"Calories:   {calorieSummary}");
+            Console.WriteLine($"Fat:   {fatSummary}");
+            Console.WriteLine($"Carbohydrates:   {carbohydratesSummary}");
+            Console.WriteLine($"Proteins:   {proteinsSummary}");
+            Console.WriteLine($"Cost:   {costSummary}");
+            Console.WriteLine("---------------------------------------------------");
+
+        }
     }
 }

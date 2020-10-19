@@ -21,21 +21,22 @@ namespace ModernCalorieCalculator.Domain.Entity
         public decimal SumFats { get; set; }
         [XmlElement("TypeOfMeal")]
         public string TypeOfMeal { get; set; }
-        [XmlArrayItem(Type = typeof(Item))]
-        public List<Item> DayItems { get; set; }
+        [XmlArrayItem(Type = typeof(UserItem))]
+        public List<UserItem> DayItems { get; set; }
         [XmlElement("UserId")]
         public int UserId { get; set; }
+        [XmlElement("UserItems")]
+        public List<UserItem> UserItems { get; set; }
 
         public Day()
         {
 
         }
-        public Day(int id, DateTime userDay, int userId, List<Item> items)
+        public Day(int id, DateTime userDay, int userId)
         {
             Id = id;
             UserDay = userDay;
-            UserId = userId;
-            DayItems = items;
+            UserId = userId; 
         }
     }
 }

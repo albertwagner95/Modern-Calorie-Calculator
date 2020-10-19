@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace ModernCalorieCalculator.Helpers
+namespace ModernCalorieCalculator.App
 {
     public static class TableParser
     {

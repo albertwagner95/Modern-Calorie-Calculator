@@ -47,14 +47,18 @@ namespace ModernCalorieCalculator.App.Concrete
             return (day.Id);
         }
 
-        public int AddProductToUserDay(int productId, DateTime dayDate, int userId, string kindOfMeal)
+        public int AddProductToUserDay(int productId, DateTime dayDate, int userId, string typeOfMeal, decimal grams)
         {
             var item = _itemService.GetItemById(productId);
+
+
             var day = Days.FirstOrDefault(x => x.UserDay == dayDate && x.UserId == userId);
             if (item != null && day != null)
-            {
-                item.KindOfMeal = kindOfMeal;
-                day.DayItems.Add(item);
+            { 
+                var itemToAddUserDay = DayManagerHelpers.ReturnConvertedValue(grams, item);
+                itemToAddUserDay.TypeOfMeal = typeOfMeal;
+                day.DayItems.Add(itemToAddUserDay);
+
                 AddDayToXml();
                 return item.Id;
             }

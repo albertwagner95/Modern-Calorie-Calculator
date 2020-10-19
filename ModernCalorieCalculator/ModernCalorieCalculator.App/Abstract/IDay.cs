@@ -21,7 +21,7 @@ namespace ModernCalorieCalculator.App.Abstract
 
         List<Day> GetAllUserDays(int userId);
 
-        int AddProductToUserDay(int productId, DateTime dayDate, int userId, string kindOfMeal);
+        int AddProductToUserDay(int productId, DateTime dayDate, int userId, string typeOfMeal, decimal grams);
 
         int GetLastId();
     }

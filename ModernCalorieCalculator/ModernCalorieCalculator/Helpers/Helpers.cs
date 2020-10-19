@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ModernCalorieCalculator.Helpers
 {
-    class Helpers
+    public class Helpers
     {
     }
 }

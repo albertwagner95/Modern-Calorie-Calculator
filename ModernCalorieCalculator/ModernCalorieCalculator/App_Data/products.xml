@@ -1,159 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Item Id="1">
-    <UpdateTime>2020-10-10T20:22:06.4046771Z</UpdateTime>
+    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
     <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>3</CategoryId>
-    <CategoryName>Diary</CategoryName>
-    <Name>P</Name>
-    <KcalPerOneHounderGrams>120</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>22</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>33</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>33</QuantityProteinsPOHG>
-    <ProductCost>2.12</ProductCost>
+    <CategoryId>1</CategoryId>
+    <CategoryName>Meat</CategoryName>
+    <Name>Pierś z kurczaka</Name>
+    <KcalPerOneHounderGrams>200</KcalPerOneHounderGrams>
+    <QuantityFatsPOHG>3</QuantityFatsPOHG>
+    <QuantityCarbohydratesPOHG>10</QuantityCarbohydratesPOHG>
+    <QuantityProteinsPOHG>21</QuantityProteinsPOHG>
+    <ProductCost>9.99</ProductCost>
   </Item>
   <Item Id="2">
     <UpdateTime>0001-01-01T00:00:00</UpdateTime>
     <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>3</CategoryId>
-    <CategoryName>Diary</CategoryName>
-    <Name>Bułka Z pomidorami</Name>
-    <KcalPerOneHounderGrams>212</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>22</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>3</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>3</QuantityProteinsPOHG>
-    <ProductCost>43</ProductCost>
+    <CategoryId>2</CategoryId>
+    <CategoryName>Vegetables</CategoryName>
+    <Name>Rukola</Name>
+    <KcalPerOneHounderGrams>25</KcalPerOneHounderGrams>
+    <QuantityFatsPOHG>1</QuantityFatsPOHG>
+    <QuantityCarbohydratesPOHG>5</QuantityCarbohydratesPOHG>
+    <QuantityProteinsPOHG>1</QuantityProteinsPOHG>
+    <ProductCost>4.30</ProductCost>
   </Item>
   <Item Id="3">
     <UpdateTime>0001-01-01T00:00:00</UpdateTime>
     <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>2</CategoryId>
-    <CategoryName>Vegetables</CategoryName>
-    <Name>Pierogi</Name>
-    <KcalPerOneHounderGrams>0</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>0</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>0</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>0</QuantityProteinsPOHG>
-    <ProductCost>0</ProductCost>
-  </Item>
-  <Item Id="4">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>5</CategoryId>
-    <CategoryName>Water</CategoryName>
-    <Name>Banan</Name>
-    <KcalPerOneHounderGrams>123</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>99</QuantityFatsPOHG>
+    <CategoryId>3</CategoryId>
+    <CategoryName>Diary</CategoryName>
+    <Name>Chleb Z Makiem</Name>
+    <KcalPerOneHounderGrams>403</KcalPerOneHounderGrams>
+    <QuantityFatsPOHG>10</QuantityFatsPOHG>
     <QuantityCarbohydratesPOHG>21</QuantityCarbohydratesPOHG>
     <QuantityProteinsPOHG>33</QuantityProteinsPOHG>
-    <ProductCost>221</ProductCost>
-  </Item>
-  <Item Id="5">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>6</CategoryId>
-    <CategoryName>Fruits</CategoryName>
-    <Name>Apple</Name>
-    <KcalPerOneHounderGrams>192</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>2</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>2</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>3</QuantityProteinsPOHG>
-    <ProductCost>4</ProductCost>
-  </Item>
-  <Item Id="6">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>2</CategoryId>
-    <CategoryName>Vegetables</CategoryName>
-    <Name>Brokuł</Name>
-    <KcalPerOneHounderGrams>21</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>0</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>2</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>2</QuantityProteinsPOHG>
-    <ProductCost>2</ProductCost>
-  </Item>
-  <Item Id="7">
-    <UpdateTime>2020-10-10T20:37:20.3776237Z</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>1</CategoryId>
-    <CategoryName>Meat</CategoryName>
-    <Name>Schabowe</Name>
-    <KcalPerOneHounderGrams>100</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>100</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>100</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>100</QuantityProteinsPOHG>
-    <ProductCost>100</ProductCost>
-  </Item>
-  <Item Id="8">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>8</CategoryId>
-    <CategoryName>Other</CategoryName>
-    <Name />
-    <KcalPerOneHounderGrams>0</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>0</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>0</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>0</QuantityProteinsPOHG>
-    <ProductCost>0</ProductCost>
-  </Item>
-  <Item Id="9">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>1</CategoryId>
-    <CategoryName>Meat</CategoryName>
-    <Name>Kotlet</Name>
-    <KcalPerOneHounderGrams>12</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>21</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>12</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>22</QuantityProteinsPOHG>
-    <ProductCost>12</ProductCost>
-  </Item>
-  <Item Id="10">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>7</CategoryId>
-    <CategoryName>Grains</CategoryName>
-    <Name>Chleb Sojowy</Name>
-    <KcalPerOneHounderGrams>120</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>212</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>221</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>21</QuantityProteinsPOHG>
-    <ProductCost>22</ProductCost>
-  </Item>
-  <Item Id="11">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>2</CategoryId>
-    <CategoryName>Vegetables</CategoryName>
-    <Name>2</Name>
-    <KcalPerOneHounderGrams>2</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>2</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>2</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>2</QuantityProteinsPOHG>
-    <ProductCost>2</ProductCost>
-  </Item>
-  <Item Id="12">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>2</CategoryId>
-    <CategoryName>Vegetables</CategoryName>
-    <Name>2</Name>
-    <KcalPerOneHounderGrams>2</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>2</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>2</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>2</QuantityProteinsPOHG>
-    <ProductCost>2</ProductCost>
-  </Item>
-  <Item Id="13">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
-    <CreationDate>0001-01-01T00:00:00</CreationDate>
-    <CategoryId>2</CategoryId>
-    <CategoryName>Vegetables</CategoryName>
-    <Name>2</Name>
-    <KcalPerOneHounderGrams>2</KcalPerOneHounderGrams>
-    <QuantityFatsPOHG>2</QuantityFatsPOHG>
-    <QuantityCarbohydratesPOHG>2</QuantityCarbohydratesPOHG>
-    <QuantityProteinsPOHG>2</QuantityProteinsPOHG>
-    <ProductCost>2</ProductCost>
+    <ProductCost>3.12</ProductCost>
   </Item>
 </Items>
