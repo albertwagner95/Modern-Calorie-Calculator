@@ -1,19 +1,36 @@
-﻿using System;
+﻿using ModernCalorieCalculator.Domain;
+using ModernCalorieCalculator.Domain.Entity;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ModernCalorieCalculator.App.Abstract
 {
-    public interface IService<T>
+    public interface IService
     {
-        List<T> Items { get; set; }
+        List<Item> Items { get; set; }
 
-        List<T> GetAllItems();
+        ItemConfiguration ItemConfiguration { get; set; }
 
-        int AddItem(T item);
+        List<Item> GetAllItems();
 
-        int UpdateItem(T item);
+        int AddItem(Item item);
 
-        void RemoveItem(T item);
+        int UpdateItem(Item item);
+
+        void RemoveItem(Item item);
+
+        Item GetItemById(int id);
+
+        int GetLastId();
+
+        int UpdateName(string name, Item item);
+
+        int UpdateKcalPerOneHoundredGrams(int quantity, Item item);
+
+        int UpdateProteinsPerOneHoundredGrams(int quantity, Item item);
+
+        int UpdateCarbohydratesPerOneHoundredGrams(int quantity, Item item);
+
+        int UpdateFatsPerOneHoundredGrams(int quantity, Item item);
+        void AddItemToXml(Item item);
     }
 }

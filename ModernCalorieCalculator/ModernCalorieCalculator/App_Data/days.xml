@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Days xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Day Id="1">
+    <UserDay>2020-10-20T00:00:00</UserDay>
+    <SumKcal>0</SumKcal>
+    <SumCarbohydrates>0</SumCarbohydrates>
+    <SumProteins>0</SumProteins>
+    <SumFats>0</SumFats>
+    <DayItems>
+      <UserItem Id="1">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Pierś z kurczaka</Name>
+        <KcalPerOneHounderGrams>0</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>1</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>0</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>0</QuantityProteinsPOHG>
+        <ProductCost>9.99</ProductCost>
+        <TypeOfMeal>Breakfast</TypeOfMeal>
+        <DateAdd>2020-10-20T00:00:00</DateAdd>
+        <UserId>2</UserId>
+      </UserItem>
+      <UserItem Id="1">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Pierś z kurczaka</Name>
+        <KcalPerOneHounderGrams>204</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>3.06</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>10.20</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>21.42</QuantityProteinsPOHG>
+        <ProductCost>10.1898</ProductCost>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="3">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Chleb Z Makiem</Name>
+        <KcalPerOneHounderGrams>488</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>12.10</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>25.41</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>39.93</QuantityProteinsPOHG>
+        <ProductCost>3.7752</ProductCost>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="1">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Pierś z kurczaka</Name>
+        <KcalPerOneHounderGrams>600</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>9</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>30</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>63</QuantityProteinsPOHG>
+        <ProductCost>29.97</ProductCost>
+        <TypeOfMeal>Snack</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="2">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Rukola</Name>
+        <KcalPerOneHounderGrams>834</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>33.34</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>166.70</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>33.34</QuantityProteinsPOHG>
+        <ProductCost>143.3620</ProductCost>
+        <TypeOfMeal>Supper</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="2">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Rukola</Name>
+        <KcalPerOneHounderGrams>111</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>4.43</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>22.15</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>4.43</QuantityProteinsPOHG>
+        <ProductCost>19.0490</ProductCost>
+        <TypeOfMeal>Supper</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="3">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Chleb Z Makiem</Name>
+        <KcalPerOneHounderGrams>1008</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>25.0</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>52.5</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>82.5</QuantityProteinsPOHG>
+        <ProductCost>7.800</ProductCost>
+        <TypeOfMeal>Dinner</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="3">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Chleb Z Makiem</Name>
+        <KcalPerOneHounderGrams>1008</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>25.0</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>52.5</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>82.5</QuantityProteinsPOHG>
+        <ProductCost>7.800</ProductCost>
+        <TypeOfMeal>Dinner</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="4">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Schab</Name>
+        <KcalPerOneHounderGrams>1170</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>85</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>50</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>90</QuantityProteinsPOHG>
+        <ProductCost>9.50</ProductCost>
+        <TypeOfMeal>Supper</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+      <UserItem Id="5">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Pomidor</Name>
+        <KcalPerOneHounderGrams>6</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>0.140</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>2.80</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>1.12</QuantityProteinsPOHG>
+        <ProductCost>0.1960</ProductCost>
+        <TypeOfMeal>Snack</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+    </DayItems>
+    <UserId>2</UserId>
+  </Day>
+  <Day Id="2">
+    <UserDay>2011-11-11T00:00:00</UserDay>
+    <SumKcal>0</SumKcal>
+    <SumCarbohydrates>0</SumCarbohydrates>
+    <SumProteins>0</SumProteins>
+    <SumFats>0</SumFats>
+    <DayItems>
+      <UserItem Id="1">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Pierś z kurczaka</Name>
+        <KcalPerOneHounderGrams>242</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>3.63</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>12.10</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>25.41</QuantityProteinsPOHG>
+        <ProductCost>12.0879</ProductCost>
+        <TypeOfMeal>SecondBreakfast</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+    </DayItems>
+    <UserId>2</UserId>
+  </Day>
+  <Day Id="3">
+    <UserDay>2020-11-12T00:00:00</UserDay>
+    <SumKcal>0</SumKcal>
+    <SumCarbohydrates>0</SumCarbohydrates>
+    <SumProteins>0</SumProteins>
+    <SumFats>0</SumFats>
+    <DayItems />
+    <UserId>2</UserId>
+  </Day>
+  <Day Id="4">
+    <UserDay>2020-10-21T00:00:00</UserDay>
+    <SumKcal>0</SumKcal>
+    <SumCarbohydrates>0</SumCarbohydrates>
+    <SumProteins>0</SumProteins>
+    <SumFats>0</SumFats>
+    <DayItems />
+    <UserId>2</UserId>
+  </Day>
+  <Day Id="5">
+    <UserDay>2020-10-22T00:00:00</UserDay>
+    <SumKcal>0</SumKcal>
+    <SumCarbohydrates>0</SumCarbohydrates>
+    <SumProteins>0</SumProteins>
+    <SumFats>0</SumFats>
+    <DayItems />
+    <UserId>2</UserId>
+  </Day>
+  <Day Id="6">
+    <UserDay>2020-10-30T00:00:00</UserDay>
+    <SumKcal>0</SumKcal>
+    <SumCarbohydrates>0</SumCarbohydrates>
+    <SumProteins>0</SumProteins>
+    <SumFats>0</SumFats>
+    <DayItems>
+      <UserItem Id="1">
+        <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+        <CreationDate>0001-01-01T00:00:00</CreationDate>
+        <CategoryId>0</CategoryId>
+        <Name>Pierś z kurczaka</Name>
+        <KcalPerOneHounderGrams>68</KcalPerOneHounderGrams>
+        <QuantityFatsPOHG>1.02</QuantityFatsPOHG>
+        <QuantityCarbohydratesPOHG>3.40</QuantityCarbohydratesPOHG>
+        <QuantityProteinsPOHG>7.14</QuantityProteinsPOHG>
+        <ProductCost>3.3966</ProductCost>
+        <TypeOfMeal>Dinner</TypeOfMeal>
+        <DateAdd>0001-01-01T00:00:00</DateAdd>
+        <UserId>0</UserId>
+      </UserItem>
+    </DayItems>
+    <UserId>2</UserId>
+  </Day>
+</Days>
