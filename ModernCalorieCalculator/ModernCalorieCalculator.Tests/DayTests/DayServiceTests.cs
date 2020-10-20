@@ -1,16 +1,4 @@
-﻿using FluentAssertions;
-using ModernCalorieCalculator.App.Abstract;
-using ModernCalorieCalculator.App.Concrete;
-using ModernCalorieCalculator.App.Managers;
-using ModernCalorieCalculator.App.Managers.Helpers;
-using ModernCalorieCalculator.Domain.Entity;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-
-namespace ModernCalorieCalculator.Tests.DayTests
+﻿namespace ModernCalorieCalculator.Tests.DayTests
 {
     public class DayServiceTests
     {

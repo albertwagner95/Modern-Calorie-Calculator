@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.Domain.Entity
 {
     public class Day
-    { 
+    {
         [XmlAttribute("Id")]
         public int Id { get; set; }
         [XmlElement("UserDay")]
@@ -36,7 +35,7 @@ namespace ModernCalorieCalculator.Domain.Entity
         {
             Id = id;
             UserDay = userDay;
-            UserId = userId; 
+            UserId = userId;
         }
     }
 }

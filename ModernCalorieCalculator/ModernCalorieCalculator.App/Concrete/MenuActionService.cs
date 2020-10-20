@@ -4,7 +4,6 @@ using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ModernCalorieCalculator.App.Concrete
 {
@@ -13,8 +12,8 @@ namespace ModernCalorieCalculator.App.Concrete
         public List<MenuAction> Items { get; set; }
 
         public MenuActionService()
-        { 
-            Items = new List<MenuAction>(); 
+        {
+            Items = new List<MenuAction>();
             Initialize();
         }
 
@@ -42,13 +41,13 @@ namespace ModernCalorieCalculator.App.Concrete
             return entity.Id;
 
         }
-       
+
         public MenuAction GetItemById(int id)
         {
             var entity = Items.FirstOrDefault(x => x.Id == id);
             return entity;
         }
-         
+
         public List<MenuAction> GetMenuActionsByMenuName(string menuName)
         {
             List<MenuAction> result = new List<MenuAction>();
@@ -81,7 +80,7 @@ namespace ModernCalorieCalculator.App.Concrete
             AddItem(new MenuAction(2, "All products", "Main"));
             AddItem(new MenuAction(3, "Modify product", "Main"));
             AddItem(new MenuAction(4, "Show item detail a product by Id, Name", "Main"));
-            AddItem(new MenuAction(5, "Day manager","Main"));
+            AddItem(new MenuAction(5, "Day manager", "Main"));
             AddItem(new MenuAction(6, "Exit", "Main"));
 
             AddItem(new MenuAction(1, "Vegetables", "AddNewItemMenu"));
@@ -94,12 +93,12 @@ namespace ModernCalorieCalculator.App.Concrete
             AddItem(new MenuAction(2, "Modify product calories 100/g ", "ModifyItemByIdMenu"));
             AddItem(new MenuAction(3, "Modify product quantity fat 100/g", "ModifyItemByIdMenu"));
             AddItem(new MenuAction(4, "Modify product quantity carbohydrates 100/g", "ModifyItemByIdMenu"));
-            AddItem(new MenuAction(5, "Modify product quantity proteins 100/g", "ModifyItemByIdMenu"));  
+            AddItem(new MenuAction(5, "Modify product quantity proteins 100/g", "ModifyItemByIdMenu"));
             AddItem(new MenuAction(6, "Back", "ModifyItemByIdMenu"));
-            
+
             AddItem(new MenuAction(1, "Add new day", "DayManager"));
             AddItem(new MenuAction(2, "Add item to day", "DayManager"));
-            AddItem(new MenuAction(3, "Show all user days", "DayManager"));
+            AddItem(new MenuAction(3, "Show user day", "DayManager"));
 
             AddItem(new MenuAction(1, DayManagerHelpers.MealType.Breakfast.ToString(), "KindOfMeal"));
             AddItem(new MenuAction(2, DayManagerHelpers.MealType.SecondBreakfast.ToString(), "KindOfMeal"));

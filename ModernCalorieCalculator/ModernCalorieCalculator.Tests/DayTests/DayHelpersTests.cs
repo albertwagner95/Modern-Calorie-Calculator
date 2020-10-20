@@ -1,8 +1,6 @@
 ﻿using FluentAssertions;
 using ModernCalorieCalculator.App.Managers.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace ModernCalorieCalculator.Tests.DayTests

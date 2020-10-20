@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.App.Concrete
@@ -37,7 +36,10 @@ namespace ModernCalorieCalculator.App.Concrete
                 var user = Users.FirstOrDefault(x => x.Id == id);
                 return user;
             }
-            else return null;
+            else
+            {
+                return null;
+            }
         }
 
         public List<User> GetUsers()

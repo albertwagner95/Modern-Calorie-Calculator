@@ -5,17 +5,13 @@ using ModernCalorieCalculator.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using ModernCalorieCalculator;
-using System.Security.Cryptography.X509Certificates;
-using System.Runtime.CompilerServices;
 
 namespace ModernCalorieCalculator.App.Managers
 {
     public class DayManager
     {
 
-        private IDay _dayService;
+        private readonly IDay _dayService;
         private readonly MenuActionService _actionService;
         private readonly IService _itemService;
         public DayManager(IDay dayService, MenuActionService menuActionService, IService itemService)
@@ -23,20 +19,6 @@ namespace ModernCalorieCalculator.App.Managers
             _itemService = itemService;
             _dayService = dayService;
             _actionService = menuActionService;
-        }
-
-        public bool IsUserHasDay(DateTime userDay, int userId)
-        {
-            var days = _dayService.GetAllUserDays(userId);
-            var isDay = days.FirstOrDefault(x => x.UserId == userId);
-            if (isDay == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
         }
         public DateTime LoadingDayFromUser()
         {
@@ -218,11 +200,11 @@ namespace ModernCalorieCalculator.App.Managers
             var costSummary = DayManagerHelpers.ReturnCostSummary(dayToShow.DayItems);
 
             Console.WriteLine("---------------------------------------------------");
-            Console.WriteLine($"Calories:   {calorieSummary}");
-            Console.WriteLine($"Fat:   {fatSummary}");
-            Console.WriteLine($"Carbohydrates:   {carbohydratesSummary}");
-            Console.WriteLine($"Proteins:   {proteinsSummary}");
-            Console.WriteLine($"Cost:   {costSummary}");
+            Console.WriteLine($"|  Calories:        {calorieSummary}");
+            Console.WriteLine($"|  Fat:             {fatSummary}");
+            Console.WriteLine($"|  Carbohydrates:   {carbohydratesSummary}");
+            Console.WriteLine($"|  Proteins:        {proteinsSummary}");
+            Console.WriteLine($"|  Cost:            {costSummary} PLN");
             Console.WriteLine("---------------------------------------------------");
 
         }

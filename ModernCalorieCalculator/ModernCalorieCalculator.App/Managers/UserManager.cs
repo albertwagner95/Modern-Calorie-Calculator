@@ -1,15 +1,12 @@
 ﻿using ModernCalorieCalculator.App.Abstract;
-using ModernCalorieCalculator.App.Concrete;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ModernCalorieCalculator.App.Managers
 {
     public class UserManager
     {
-        private IUser _userService;
+        private readonly IUser _userService;
 
         public UserManager(IUser userService)
         {
@@ -23,7 +20,10 @@ namespace ModernCalorieCalculator.App.Managers
                 var userId = _userService.AddUser(user);
                 return userId;
             }
-            else return 0;
+            else
+            {
+                return 0;
+            }
         }
 
         public User RegisterUser(string name, string lastName, string login)

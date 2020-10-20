@@ -1,14 +1,8 @@
-﻿using ModernCalorieCalculator.App.Concrete;
-using System;
-using System.Collections.Generic;
-using ModernCalorieCalculator.App;
+﻿using ModernCalorieCalculator.App;
+using ModernCalorieCalculator.App.Concrete;
 using ModernCalorieCalculator.App.Managers;
-using ModernCalorieCalculator.Helpers;
-using System.Data;
-using ModernCalorieCalculator.Domain.Entity;
-using ModernCalorieCalculator.App.Managers.Helpers;
-using System.Configuration;
-using System.IO;
+using System;
+
 
 namespace ModernCalorieCalculator
 {
@@ -17,8 +11,7 @@ namespace ModernCalorieCalculator
         static void Main(string[] args)
         {
             Console.WriteLine("Today is " + DateTime.Today.ToShortDateString());
-            Console.WriteLine("\nWelcome in Modern Calories Calculator");
-            Console.WriteLine("Please enter, what do you want to do?");
+            Console.WriteLine("\nWelcome in Modern Calories Calculator \n");
 
             ItemService itemService = new ItemService();
             MenuActionService actionService = new MenuActionService();
@@ -31,21 +24,23 @@ namespace ModernCalorieCalculator
             DayManager dayManager = new DayManager(dayService, actionService, itemService);
 
             var isLogin = 0;
+
             while (isLogin == 0)
             {
                 isLogin = userManager.Start();
                 Console.Clear();
             }
+
             if (isLogin > 0)
             {
                 var user = userService.GetUserById(isLogin);
                 Console.WriteLine($"You are logged in as {user.Name} {user.LastName}\n");
 
-                while (true)
+                while (isLogin > 0)
                 {
                     actionService.ShowMenu("Main");
                     var operation = Console.ReadKey();
-
+                    Console.Clear();
                     switch (operation.KeyChar)
                     {
                         case '1':
@@ -72,20 +67,21 @@ namespace ModernCalorieCalculator
                         case '5':
                             dayManager.ShowDayOperations(isLogin);
                             break;
+                        case '6':
+                            isLogin = 0;
+                            break;
                         default:
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Action you entered does not exist");
                             Console.ForegroundColor = ConsoleColor.Gray;
                             break;
                     }
+                    Console.WriteLine("Press any key...");
+                    Console.ReadKey();
+                    Console.Clear();
                 }
             }
 
         }
-
-
-
-
-
     }
 }

@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 
 namespace ModernCalorieCalculator.App.Managers.Helpers
 {
@@ -102,7 +101,8 @@ namespace ModernCalorieCalculator.App.Managers.Helpers
             }
             else
             {
-                return items.Sum(x => x.ProductCost);
+                var sum = items.Sum(x => x.ProductCost);
+                return Math.Round(sum, 2);
             }
         }
 

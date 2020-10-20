@@ -5,9 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.App.Concrete
@@ -15,8 +12,8 @@ namespace ModernCalorieCalculator.App.Concrete
     public class DayService : IDay
     {
         public List<Day> Days { get; set; }
-        private IUser _userSerice;
-        private IService _itemService;
+        private readonly IUser _userSerice;
+        private readonly IService _itemService;
         private readonly string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\App_Data\days.xml");
         public DayService(IUser userService, IService itemService)
         {
@@ -50,11 +47,11 @@ namespace ModernCalorieCalculator.App.Concrete
         public int AddProductToUserDay(int productId, DateTime dayDate, int userId, string typeOfMeal, decimal grams)
         {
             var item = _itemService.GetItemById(productId);
-
+            Days = LoadDaysFromXml(path);
 
             var day = Days.FirstOrDefault(x => x.UserDay == dayDate && x.UserId == userId);
             if (item != null && day != null)
-            { 
+            {
                 var itemToAddUserDay = DayManagerHelpers.ReturnConvertedValue(grams, item);
                 itemToAddUserDay.TypeOfMeal = typeOfMeal;
                 day.DayItems.Add(itemToAddUserDay);

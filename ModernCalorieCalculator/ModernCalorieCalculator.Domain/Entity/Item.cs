@@ -1,9 +1,4 @@
-﻿using ModernCalorieCalculator.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.Domain.Entity
 {
@@ -24,7 +19,7 @@ namespace ModernCalorieCalculator.Domain.Entity
         public decimal QuantityProteinsPOHG { get; set; } //POHG = PerOneHounderdGrams
         [XmlElement("ProductCost")]
         public decimal ProductCost { get; set; } //How much do you pay for a specific product e.g milk chocolate costs PLN 5. e.t.c.
- 
+
         public Item()
         {
 

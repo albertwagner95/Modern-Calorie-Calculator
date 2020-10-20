@@ -13,11 +13,11 @@
     <ProductCost>9.99</ProductCost>
   </Item>
   <Item Id="2">
-    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+    <UpdateTime>2020-10-20T11:51:24.1610672Z</UpdateTime>
     <CreationDate>0001-01-01T00:00:00</CreationDate>
     <CategoryId>2</CategoryId>
     <CategoryName>Vegetables</CategoryName>
-    <Name>Rukola</Name>
+    <Name>Rukolina</Name>
     <KcalPerOneHounderGrams>25</KcalPerOneHounderGrams>
     <QuantityFatsPOHG>1</QuantityFatsPOHG>
     <QuantityCarbohydratesPOHG>5</QuantityCarbohydratesPOHG>
@@ -35,5 +35,29 @@
     <QuantityCarbohydratesPOHG>21</QuantityCarbohydratesPOHG>
     <QuantityProteinsPOHG>33</QuantityProteinsPOHG>
     <ProductCost>3.12</ProductCost>
+  </Item>
+  <Item Id="4">
+    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+    <CreationDate>0001-01-01T00:00:00</CreationDate>
+    <CategoryId>1</CategoryId>
+    <CategoryName>Meat</CategoryName>
+    <Name>Schab</Name>
+    <KcalPerOneHounderGrams>234</KcalPerOneHounderGrams>
+    <QuantityFatsPOHG>17</QuantityFatsPOHG>
+    <QuantityCarbohydratesPOHG>10</QuantityCarbohydratesPOHG>
+    <QuantityProteinsPOHG>18</QuantityProteinsPOHG>
+    <ProductCost>1.90</ProductCost>
+  </Item>
+  <Item Id="5">
+    <UpdateTime>0001-01-01T00:00:00</UpdateTime>
+    <CreationDate>0001-01-01T00:00:00</CreationDate>
+    <CategoryId>2</CategoryId>
+    <CategoryName>Vegetables</CategoryName>
+    <Name>Pomidor</Name>
+    <KcalPerOneHounderGrams>20</KcalPerOneHounderGrams>
+    <QuantityFatsPOHG>0.5</QuantityFatsPOHG>
+    <QuantityCarbohydratesPOHG>10</QuantityCarbohydratesPOHG>
+    <QuantityProteinsPOHG>4</QuantityProteinsPOHG>
+    <ProductCost>0.70</ProductCost>
   </Item>
 </Items>

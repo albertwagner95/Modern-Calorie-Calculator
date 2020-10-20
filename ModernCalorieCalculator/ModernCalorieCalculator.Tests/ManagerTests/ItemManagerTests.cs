@@ -6,10 +6,7 @@ using ModernCalorieCalculator.App.Managers.Helpers;
 using ModernCalorieCalculator.Domain;
 using ModernCalorieCalculator.Domain.Entity;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Security.Permissions;
 using Xunit;
 
 namespace ModernCalorieCalculator.Tests
@@ -99,7 +96,7 @@ namespace ModernCalorieCalculator.Tests
             //assert
             result.Should().Be(1);
             two.Should().Be(0);
-            
+
         }
     }
 

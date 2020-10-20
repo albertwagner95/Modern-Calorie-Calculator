@@ -1,19 +1,16 @@
 ﻿using ModernCalorieCalculator.App.Abstract;
 using ModernCalorieCalculator.App.Concrete;
 using ModernCalorieCalculator.App.Managers.Helpers;
-using ModernCalorieCalculator.Domain;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ModernCalorieCalculator.App.Managers
 {
     public class ItemManager
     {
         private readonly MenuActionService _actionService;
-        private IService _itemService;
-        private ICategory _categoryService;
+        private readonly IService _itemService;
+        private readonly ICategory _categoryService;
 
         public ItemManager(MenuActionService actionService, IService itemService, ICategory categoryService)
         {
@@ -212,6 +209,6 @@ namespace ModernCalorieCalculator.App.Managers
                     return productToUpdate.Id;
             }
         }
-        
+
     }
 }

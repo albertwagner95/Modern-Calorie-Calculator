@@ -3,9 +3,6 @@ using ModernCalorieCalculator.App.Abstract;
 using ModernCalorieCalculator.App.Managers;
 using ModernCalorieCalculator.Domain.Entity;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace ModernCalorieCalculator.Tests.UsertTests
@@ -51,7 +48,7 @@ namespace ModernCalorieCalculator.Tests.UsertTests
 
             result.Should().BeOfType(typeof(User));
             result.Should().Be(result);
-            result.Should().NotBeNull(); 
+            result.Should().NotBeNull();
             resultTwo.Should().BeNull();
         }
 

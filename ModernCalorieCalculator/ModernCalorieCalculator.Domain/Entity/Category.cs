@@ -1,7 +1,4 @@
 ﻿using ModernCalorieCalculator.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace ModernCalorieCalculator.Domain.Entity
@@ -20,7 +17,7 @@ namespace ModernCalorieCalculator.Domain.Entity
         public Category(int categoryId, string categoryName)
         {
             CategoryId = categoryId;
-            CategoryName = categoryName; 
+            CategoryName = categoryName;
         }
     }
 }

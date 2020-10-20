@@ -1,12 +1,7 @@
 ﻿using FluentAssertions;
-using ModernCalorieCalculator.App.Abstract;
 using ModernCalorieCalculator.App.Concrete;
 using ModernCalorieCalculator.Domain;
 using ModernCalorieCalculator.Domain.Entity;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace ModernCalorieCalculator.Tests.ServiceTests

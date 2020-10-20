@@ -1,13 +1,10 @@
 ﻿using ModernCalorieCalculator.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ModernCalorieCalculator.Domain.Entity
 {
     public class MenuAction : AuditableModel
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
 
         public string Name { get; set; }
 

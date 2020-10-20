@@ -1,8 +1,6 @@
 ﻿using ModernCalorieCalculator.App.Abstract;
 using ModernCalorieCalculator.Domain.Entity;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ModernCalorieCalculator.App.Managers.Helpers
 {

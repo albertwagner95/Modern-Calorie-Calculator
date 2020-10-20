@@ -1,7 +1,5 @@
 ﻿using ModernCalorieCalculator.Domain.Entity;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ModernCalorieCalculator.App.Abstract
 {
@@ -18,6 +16,6 @@ namespace ModernCalorieCalculator.App.Abstract
         void RemoveItem(MenuAction item);
 
         MenuAction GetItemById(int id);
-         
+
     }
 }
